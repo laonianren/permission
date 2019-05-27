@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onNeverAsk(List<Permission> canRetryList, List<Permission> neverAskList) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle("申请权限")
-                                .setMessage("方法调用：onNeverAsk()\n部分权限未允许，点击了不在弹出\n" + list2String("canRetryList", canRetryList) + list2String("neverAskList", neverAskList))
+                                .setMessage("方法调用：onNeverAsk()\n部分权限未允许，点击了不再弹出\n" + list2String("canRetryList", canRetryList) + list2String("neverAskList", neverAskList))
                                 .show();
                     }
                 });
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
        for (Permission permission : permissions) {
            builder.append(permission.name).append("\n");
        }
-        builder.append("]\n");
+       builder.append("]\n");
        return builder.toString();
     }
 }
